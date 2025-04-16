@@ -243,73 +243,9 @@ int Nate_Dave::hprob(int r, int c){
         width++;
     }
     
-    //if((r+c)%minShipLen==0 && minShipLen <=5){
-      //  if(ch == WATER){
-        //    hBonusPoints+=10;
-        //} 
-        //else{
-         //   minShipLen++;
-        //}
-    //}
-    
-
     if(width<3) return 0;
     return width+hBonusPoints;
 }
-
-
-    
-    
-    /*if ((row%3)==(col%3)){
-        width += 5;
-    }
-        for (int i=1;i<5 && col+i<board_size; i++){ //right
-            ch=shot_board[row][col+i];
-            //if (shot_board[row][col-1] == DUPLICATE_MISS && shot_board[row][col+1] == DUPLICATE_MISS){
-              //  width = width -3;
-            //}
-            if (ch == WATER){
-                width++;
-            }
-
-            else if (ch == HIT){
-                if (i==1) {width = width+29;}
-                else if (i==2) { width = width+20; }
-                else if (i==3) { width = width+3; }
-                else if (i==4) { width = width+2; }
-                else {width = width+1; }
-            }
-            else break;
-        }
-        //if (col-1 > 0 && shot_board[row][col-1]==HIT && shot_board[row][col] == WATER ){
-          // width+=3;
-        //} 
-
-    if(shot_board[row][col]!=WATER) return 0; 
-        
-        for (int i=1;i<5 && col-i>0; i++){ //left
-            ch=shot_board[row][col-i];
-            //if (shot_board[row][col-1] == DUPLICATE_MISS && shot_board[row][col+1] == DUPLICATE_MISS){
-              //  width = width -3;
-            //}
-
-            if (ch == WATER){
-                width++;
-            }
-            else if (ch == HIT){
-                if (i==1) {width = width+29;}
-                else if (i==2) { width = width+20; }
-                else if (i==3) { width = width+3; }
-                else if (i==4) { width = width+2; }
-                else {width = width+1; }
-            }
-            else break;
-        }
-        //if (col+1 < board_size && shot_board[row][col+1]==HIT && shot_board[row][col] == WATER ){
-          // width+=3;
-        //}
-        */
-
 
     
 int Nate_Dave::vprob(int r, int c){
@@ -349,82 +285,10 @@ int Nate_Dave::vprob(int r, int c){
         height++;
     }
     
-    //if((r+c)%minShipLen==0 && minShipLen <= 5){
-      //  if(ch == WATER){
-        //    vBonusPoints+=10;
-        //} else{
-         //   minShipLen++;
-       // }
-   // }
-    
     if(height<3) return 0;
     return height+vBonusPoints;
 }
 
-
-    /*    for (int i=1;i<5 && row+i<board_size; i++){ //up
-            ch=shot_board[row+i][col];
-           // if (shot_board[row-1][col] == DUPLICATE_MISS && shot_board[row+1][col] == DUPLICATE_MISS){
-             //   height = height -3;
-           // }
-
-            if (ch == WATER){
-                height++;
-            }
-            else if (ch == HIT){
-                if (i==1) {height = height+29;}
-                else if (i==2) { height = height+20; }
-                else if (i==3) { height = height+3; }
-                else if (i==4) { height = height+2; }
-                else {height = height+1; }
-            }
-            else break;
-        }
-        //if (row-1 > 0 && shot_board[row-1][col]==HIT && shot_board[row][col] == WATER ){
-          // height+=3;
-        //}
-
-    if(shot_board[row][col]!=WATER) return 0;
-         
-        for (int i=1;i<5 && row-i>0; i++){ //down
-            ch=shot_board[row-i][col];
-          //  if (shot_board[row-1][col] == DUPLICATE_MISS && shot_board[row+1][col] == DUPLICATE_MISS){
-              //  height = height -3;
-            //}
-
-            if (ch == WATER){
-                height++;
-            }
-            else if (ch == HIT){
-                if (i==1) {height = height+29;}
-                else if (i==2) { height = height+20; }
-                else if (i==3) { height = height+3; }
-                else if (i==4) { height = height+2; }
-                else {height = height+1; }
-            }
-            else break;
-         }
-         //if (row+1 < board_size && shot_board[row+1][col]==HIT && shot_board[row][col] == WATER ){
-          // height+=3;
-        // }
-
-    if (height<3)return 0;
-    else return height;
-    }
-    */
-        
-/*
-    for (int row = 0; row < this->board_size; row++) {
-        for (int col = 0; col < this->board_size; col++) {
-            if (this->shot_board[row][col] == WATER) {
-                shot.row = row;
-                shot.col = col;
-                return shot;
-            }
-        }
-    }
-    return shot;
-}
 */
 /*================================================================================
  * This function is called to inform your AI of the result of a previous shot,
